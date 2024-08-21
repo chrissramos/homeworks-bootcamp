@@ -12,7 +12,9 @@ jobs:
       MY_ENV_VAR: "Hello Bootcamp from the environment variable!!!"
     steps:
       - name: Print environment variable
-        run: echo 'The environment variable is: ${{ env.MY_ENV_VAR }}'
+        run: |
+          echo 'The environment variable is: ${{ env.MY_ENV_VAR }}'
 
       - name: Print secret
-        run: echo 'The secret is: ${{ secrets.MY_SECRET }}'
+        run: |
+          echo 'The secret is: ${{ secrets.MY_SECRET }}'
